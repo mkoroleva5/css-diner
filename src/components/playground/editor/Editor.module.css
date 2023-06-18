@@ -1,0 +1,28 @@
+.wrapper {
+  width: 50%;
+  font-family: menlo, monospace;
+  font-size: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.title,
+.fileName {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.fileName {
+  opacity: 0.5;
+}
+
+.editor {
+  min-height: 432px;
+  background-color: rgb(239, 239, 239);
+  color: rgb(170, 170, 170);
+}
