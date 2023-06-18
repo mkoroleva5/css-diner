@@ -13,9 +13,7 @@ const levelStateSlice = createSlice({
   initialState,
   reducers: {
     changeLevel(state, action) {
-      if (state.currentLevel > 1 && state.currentLevel <= 10) {
-        state.currentLevel = action.payload;
-      }
+      state.currentLevel = action.payload;
     },
   },
 });

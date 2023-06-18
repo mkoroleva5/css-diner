@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import userStateReducer from "./levelSlice";
+import levelStateReducer from "./levelSlice";
 
 export const store = configureStore({
   reducer: {
-    userState: userStateReducer,
+    levelState: levelStateReducer,
   },
 });
 
