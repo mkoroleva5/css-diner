@@ -2,10 +2,23 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface levelState {
   currentLevel: number;
+  completedLevels: number[];
 }
 
+const getCompletedLevels = () => {
+  const completedLevels = localStorage.getItem("completed-levels");
+
+  try {
+    return completedLevels ? JSON.parse(completedLevels) : [1, 3, 5];
+  } catch (err) {
+    localStorage.removeItem("completed-levels");
+    return [];
+  }
+};
+
 const initialState: levelState = {
-  currentLevel: 1,
+  currentLevel: Number(localStorage.getItem("level")) || 1,
+  completedLevels: getCompletedLevels(),
 };
 
 const levelStateSlice = createSlice({
@@ -14,6 +27,14 @@ const levelStateSlice = createSlice({
   reducers: {
     changeLevel(state, action) {
       state.currentLevel = action.payload;
+      localStorage.setItem("level", state.currentLevel.toString());
+    },
+    addCompletedLevel(state, action) {
+      state.completedLevels.push(action.payload);
+      localStorage.setItem(
+        "completed-levels",
+        JSON.stringify(state.completedLevels)
+      );
     },
   },
 });
