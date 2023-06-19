@@ -1,0 +1,88 @@
+.button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.15s ease-out;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.1s ease-in;
+}
+
+.line::before {
+  top: -10px;
+}
+
+.line::after {
+  top: 10px;
+}
+
+.open.line {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.open.line::before {
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.open.line::after {
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(30, 27, 23);
+  width: 365px;
+  height: 100%;
+  padding: 20px;
+  z-index: 2;
+  transition: all 0.15s ease-in;
+  transform: translateX(100%);
+}
+
+.openMenu {
+  transform: translateX(0);
+}
+
+.menuTitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+}

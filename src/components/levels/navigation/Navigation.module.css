@@ -1,0 +1,51 @@
+.buttons {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prevButton,
+.nextButton {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.25;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  opacity: 0.5;
+}
+
+.prevButton::after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  border: solid 2px white;
+  border-width: 3px 3px 0 0;
+  border-radius: 2px;
+  transform-origin: center center;
+  top: 6px;
+  left: 10px;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+}
+
+.nextButton::after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  border: solid 2px white;
+  border-width: 3px 3px 0 0;
+  border-radius: 2px;
+  transform-origin: center center;
+  top: 6px;
+  right: 10px;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+}
