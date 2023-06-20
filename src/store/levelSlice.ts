@@ -9,7 +9,7 @@ const getCompletedLevels = () => {
   const completedLevels = localStorage.getItem("completed-levels");
 
   try {
-    return completedLevels ? JSON.parse(completedLevels) : [1, 3, 5];
+    return completedLevels ? JSON.parse(completedLevels) : [];
   } catch (err) {
     localStorage.removeItem("completed-levels");
     return [];
@@ -30,7 +30,9 @@ const levelStateSlice = createSlice({
       localStorage.setItem("level", state.currentLevel.toString());
     },
     addCompletedLevel(state, action) {
-      state.completedLevels.push(action.payload);
+      if (!state.completedLevels.includes(action.payload)) {
+        state.completedLevels.push(action.payload);
+      }
       localStorage.setItem(
         "completed-levels",
         JSON.stringify(state.completedLevels)
