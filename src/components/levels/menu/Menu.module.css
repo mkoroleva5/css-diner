@@ -68,9 +68,8 @@
   top: 0;
   right: 0;
   background-color: rgb(30, 27, 23);
-  width: 365px;
+  width: 402px;
   height: 100%;
-  padding: 20px;
   z-index: 2;
   transition: all 0.15s ease-in;
   transform: translateX(100%);
@@ -81,8 +80,57 @@
 }
 
 .menuTitle {
+  padding: 20px;
   color: rgba(255, 255, 255, 0.4);
   font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 24px;
+}
+
+.levelButton {
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: transparent;
+  border: none;
+  font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(119, 119, 119);
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.levelButton:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.active {
+  font-weight: bold;
+  color: rgb(170, 170, 170);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.levelNumber {
+  opacity: 0.6;
+}
+
+.check {
+  width: 6px;
+  height: 12px;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  opacity: 0.4;
+  border: solid 3px rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  transform: rotate(40deg);
+  opacity: 0.2;
+}
+
+.completed {
+  opacity: 0.7;
+  border: solid 3px rgb(76, 187, 74);
+  border-width: 0 3px 3px 0;
 }
