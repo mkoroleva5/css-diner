@@ -1,10 +1,10 @@
-import { useAppSelector } from "../../hooks/useRedux";
-import data from "../../data/levelTitles.json";
+import { useAppSelector } from "../../../hooks/useRedux";
+import data from "../../../data/levelsData.json";
 import styles from "./Title.module.css";
 
 export const Title = () => {
   const currentLevel = useAppSelector((state) => state.levelState.currentLevel);
-  const currentTitle = data[currentLevel.toString()];
+  const currentTitle = data[currentLevel].title;
 
   return (
     <div className={styles.wrapper}>
