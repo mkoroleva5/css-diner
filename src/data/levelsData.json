@@ -1,0 +1,36 @@
+{
+  "1": { "number": "1", "selector": "A", "title": "Select the plates" },
+  "2": { "number": "2", "selector": "A", "title": "Select the bento boxes" },
+  "3": { "number": "3", "selector": "#id", "title": "Select the fancy plate" },
+  "4": {
+    "number": "4",
+    "selector": "A B",
+    "title": "Select the apple on the plate"
+  },
+  "5": {
+    "number": "5",
+    "selector": "#id A",
+    "title": "Select the pickle on the fancy plate"
+  },
+  "6": {
+    "number": "6",
+    "selector": ".classname",
+    "title": "Select the small apples"
+  },
+  "7": {
+    "number": "7",
+    "selector": "A.className",
+    "title": "Select the small oranges"
+  },
+  "8": {
+    "number": "8",
+    "selector": "Put your back into it!",
+    "title": "Select the small oranges in the bentos"
+  },
+  "9": {
+    "number": "9",
+    "selector": "A, B",
+    "title": "Select all the plates and bentos"
+  },
+  "10": { "number": "10", "selector": "*", "title": "Select all the things!" }
+}
