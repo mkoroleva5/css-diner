@@ -23,6 +23,7 @@
 
 .editorWrapper {
   display: flex;
+  width: 100%;
   min-height: 432px;
   background-color: rgb(239, 239, 239);
   color: rgb(170, 170, 170);
@@ -42,7 +43,7 @@
   gap: 10px;
   height: 21px;
   margin: 10px 10px 0 10px;
-  width: 100%;
+  width: 95%;
 }
 
 .input {
